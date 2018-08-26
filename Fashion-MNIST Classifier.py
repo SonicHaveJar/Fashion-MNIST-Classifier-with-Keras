@@ -4,7 +4,7 @@ from random import randint
 import h5py
 import os
 
-x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
+(x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
 
 x_train = tf.keras.utils.normalize(x_train)
 x_test = tf.keras.utils.normalize(x_test)
@@ -39,25 +39,25 @@ prediction = model. predict([x_test])
 prediction_NUM = np.argmax(prediction[n])
 
 if (prediction_NUM == 0):
-    print('Camiseta')
+    print('Camiseta/T-shirt')
 elif (prediction_NUM == 1):
-    print('Pantalon')
+    print('Pantalon/Trouser')
 elif (prediction_NUM == 2):
-    print('Jersey')
+    print('Jersey/Pullover')
 elif (prediction_NUM == 3):
-    print('Vestido')
+    print('Vestido/Dress')
 elif (prediction_NUM == 4):
-    print('Abrigo')
+    print('Abrigo/Coat')
 elif (prediction_NUM == 5):
-    print('Sandalia')
+    print('Sandalia/Sandal')
 elif (prediction_NUM == 6):
-    print('Camisa')
+    print('Camisa/Shirt')
 elif (prediction_NUM == 7):
-    print('Zapatilla deportiva')
+    print('Zapatilla deportiva/Sneaker')
 elif (prediction_NUM == 8):
-    print('Bolso')
+    print('Bolso/Bag')
 else:
-    print('Bota de tobillo')
+    print('Bota de tobillo/Ankle boot')
 
 
 
